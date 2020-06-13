@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nowDate = new Date("2015-12-13");
+        //当前时间
+        // var now = new Date(this.getPassYearFormatDate(nowDate));
+        // console.log(now)
+        // var timeZ = now.getTime()
+        // console.log(timeZ)
+        // var nowN = new Date()
+        // var timeN = nowN.getTime();
+        // console.log(timeN)
+
+        
+
+        // //获取年份
+        // var year = now.getFullYear()
+        // console.log(year)
+        // //计算平年闰年
+        // var abs  = function(fullYear){
+        //     if(fullYear % 4 == 0 && (fullYear % 100 != 0 || fullYear % 400 == 0)){
+        //         return "闰年"
+        //     }else{
+        //         return "平年"
+        //     }
+        // }
+        // console.log(abs(year))
+        // //获取月份（计算机的月份是从0开始计算的0 1 2 3 4 5 6 7 8 9 10 11 ）
+        // var moth = now.getMonth()
+        // console.log(moth)
+        // //获取天数
+        // var day = now.getDate()
+        // console.log(day)
+
+        // //获取小时
+        // var hours = now.getHours();
+        // console.log(hours)
+        // //获取分钟
+        // var minutes = now.getMinutes();
+        // console.log(minutes)
+        // //获取秒数
+        // var seconds = now.getSeconds();
+        // console.log(seconds)
+
+
+
+        //计算两个时间差天数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // var nowDate = new Date();
+        // console.log(nowDate.getTime(),123456)
+        // var now = new Date(this.getPassYearFormatDate(nowDate));
+        // console.log(now)
+        // var timeZ = now.getTime()
+        // console.log(timeZ)
+        var muchYear =  new Date("2020-12-13");
+        // console.log(muchYear,123456)
+        // var timemZ = muchYear.getTime()
+        // console.log(timemZ)
+        // var err = timemZ<timeZ
+        //    console.log(err)
+
+function getPassYearFormatDate(nowDate) {
+    var date = new Date(nowDate);
+    date.setDate(date.getDate()+365);
+    var seperator1 = "-";
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = year + seperator1 + month + seperator1 + strDate;
+    return currentdate;
+}
+console.log(getPassYearFormatDate(this.nowDate))
+//判断是否是闰年
+
+
+
+           </script>
+</body>
+</html>
