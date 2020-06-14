@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        var nowDate = new Date("2015-12-13");
+        // var nowDate = new Date("2015-12-13");
         //当前时间
         // var now = new Date(this.getPassYearFormatDate(nowDate));
         // console.log(now)
@@ -16,9 +16,6 @@
         // var nowN = new Date()
         // var timeN = nowN.getTime();
         // console.log(timeN)
-
-        
-
         // //获取年份
         // var year = now.getFullYear()
         // console.log(year)
@@ -48,81 +45,122 @@
         // var seconds = now.getSeconds();
         // console.log(seconds)
 
-
-
         //计算两个时间差天数
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         // var nowDate = new Date();
         // console.log(nowDate.getTime(),123456)
         // var now = new Date(this.getPassYearFormatDate(nowDate));
         // console.log(now)
         // var timeZ = now.getTime()
         // console.log(timeZ)
-        var muchYear =  new Date("2020-12-13");
+        // var muchYear =  new Date("2020-12-13");
         // console.log(muchYear,123456)
         // var timemZ = muchYear.getTime()
         // console.log(timemZ)
         // var err = timemZ<timeZ
         //    console.log(err)
+// 在网上看到的方法之后进行理解
+// function getPassYearFormatDate(nowDate) {
+//     var date = new Date(nowDate);
+//     date.setDate(date.getDate()+365);
+//     var seperator1 = "-";
+//     var year = date.getFullYear();
+//     var month = date.getMonth() + 1;
+//     var strDate = date.getDate();
+//     if (month >= 1 && month <= 9) {
+//         month = "0" + month;
+//     }
+//     if (strDate >= 0 && strDate <= 9) {
+//         strDate = "0" + strDate;
+//     }
+//     var currentdate = year + seperator1 + month + seperator1 + strDate;
+//     return currentdate;
+// }
+// console.log(getPassYearFormatDate(this.nowDate))
 
-function getPassYearFormatDate(nowDate) {
-    var date = new Date(nowDate);
-    date.setDate(date.getDate()+365);
-    var seperator1 = "-";
-    var year = date.getFullYear();
-    var month = date.getMonth() + 1;
-    var strDate = date.getDate();
-    if (month >= 1 && month <= 9) {
-        month = "0" + month;
-    }
-    if (strDate >= 0 && strDate <= 9) {
-        strDate = "0" + strDate;
-    }
-    var currentdate = year + seperator1 + month + seperator1 + strDate;
-    return currentdate;
-}
-console.log(getPassYearFormatDate(this.nowDate))
-//判断是否是闰年
+// let time = Date() //Sun Jun 14 2020 15:12:23 GMT+0800 (中国标准时间)
+// //在操作的过程中发现的一个问题Date()与new Date()的区别
+// //Date()只是一个函数只能获取时间的字符串(String类型)
+// // let year = time.getFullYear() //Date() 返回的只是字符串所以使用对象方法将会报错
+// // console.log(time)
+// let timeNew = new Date()
+// //new Date()是一个对象可以使用对象的一些获取的方法（Object类型）
+// let year = timeNew.getFullYear() //Sun Jun 14 2020 15:12:23 GMT+0800 (中国标准时间)
 
+// let dateNew = timeNew.getDate();//用来表示一个月的某一天（1-31之间的整数）
+// let dateSetNew = timeNew.setDate('19');//现有的时间可以进行更改需要设置的成那一天都是可以的
+// let dateUTCNew = timeNew.getUTCDate();//世界标准天
+// let dateSetUTCNew = timeNew.setUTCDate();//世界标准天
+// //两个的区别
+// //getUTCDate 返回 Date 对象中用全球标准时间 (UTC)表示的日期值，
+// //getDate 返回 Date 对象中用本地时间表示的一个月中的日期值
+// console.log(dateNew,dateSetNew,dateUTCNew,dateSetUTCNew)
+
+// let dayNew = timeNew.getDay()//用来表示一周中的第几天（0-6）0表示星期天 1-6表示星期一到星期六
+// let dayUTCNew = timeNew.getUTCDay()
+// //没有设置星期几的函数
+// console.log(dayNew, dayUTCNew)
+
+// let monthNew = timeNew.getMonth()//0-11表示月份
+// let monthSetNew = timeNew.setMonth('8')//0-11表示月份
+// let monthUTCNew = timeNew.getUTCMonth()//0-11表示月份
+// let monthSetUTCNew = timeNew.setUTCMonth()//0-11表示月份
+// console.log(monthNew,monthSetNew, monthUTCNew,monthSetUTCNew)
+
+// let yearFNew = timeNew.getFullYear()//表示年份
+// let yearSetFNew = timeNew.setFullYear('2010')//表示年份
+// let yearUTCFNew = timeNew.getUTCFullYear()//表示年份
+// let yearSetUTCFNew = timeNew.setUTCFullYear()//表示年份
+// console.log(yearFNew, yearSetFNew, yearUTCFNew,yearSetUTCFNew)
+
+
+// // let yearNew = timeNew.getYear()//表示年份 因存在兼容性问题所以就是被取消了，不在使用取而代之的就是getFullYear（）方法
+
+// let hoursNew = timeNew.getHours()//表示现在得小时数（0-23）
+// let hoursSetNew = timeNew.setHours()//表示现在得小时数（0-23）
+// let hoursUTCNew = timeNew.getUTCHours()//表示现在得小时数（0-23）
+// let hoursSetUTCNew = timeNew.setUTCHours()//表示现在得小时数（0-23）
+// console.log(hoursNew, hoursUTCNew, hoursSetNew, hoursSetUTCNew)//标准时间的小时和当的小时是有很大的区别的
+
+// let minutesNew = timeNew.getMinutes()//表示现在得分钟数（0-59）
+// let minutesSetNew = timeNew.setMinutes()//表示现在得分钟数（0-59）
+// let minutesUTCNew = timeNew.getUTCMinutes()//表示现在得分钟数（0-59）
+// let minutesSetUTCNew = timeNew.setUTCMinutes()//表示现在得分钟数（0-59）
+// console.log(minutesNew, minutesSetNew ,minutesUTCNew, minutesSetUTCNew)
+
+
+// let secondsNew = timeNew.getSeconds()//表示现在得秒数（0-59）
+// let secondsSetNew = timeNew.setSeconds()//表示现在得秒数（0-59）
+// let secondsUTCNew = timeNew.getUTCSeconds()//表示现在得秒数（0-59）
+// let secondsSetUTCNew = timeNew.setUTCSeconds()//表示现在得秒数（0-59）
+// console.log(secondsNew, secondsSetNew, secondsUTCNew, secondsSetUTCNew)
+
+
+// let milliNew = timeNew.getMilliseconds()//表示现在得毫秒数（0-59）
+// let milliSetNew = timeNew.setMilliseconds()//表示现在得毫秒数（0-59）
+// let milliUTCNew = timeNew.getUTCMilliseconds()//表示现在得毫秒数（0-59）
+// let milliSetUTCNew = timeNew.setUTCMilliseconds()//表示现在得毫秒数（0-59）
+// console.log(milliNew, milliSetNew, milliUTCNew, milliSetUTCNew)
+
+
+// let getTimeNew = timeNew.getTime()//返回 1970 年 1 月 1 日至今的毫秒数。为什么是1979年1月1日网上有博客我看了一下对知识的理解还是有很大的帮助的自己去看下
+
+// let getTimezoneOffsNew = timeNew.getTimezoneOffset()//返回本地时间与格林威治标准时间 (GMT) 的分钟差。
+
+// let d = Date.parse("1970-01-02")//将时间转化成从1970年1月1日到你需要转化的时间的毫秒数
+// let e = Date.UTC(2005,7,8)//将时间转化成从1970年1月1日到你需要转化的时间的毫秒数
+// console.log(e)
+// // let source = timeNew.toSource()//报类型错误
+// // console.log(source)
+// let toString1 =timeNew.toString()//与Date()直接返回的字符串是相同的
+// let toString2 =timeNew.toUTCString()//与标准时间直接返回的字符串是相同的
+// let toString3 =timeNew.toLocaleString()//与本地时间直接返回的字符串是相同的
+// let toString4 =timeNew.toLocaleTimeString()//与本地时间的时分秒直接返回的字符串是相同的
+// let toString5 =timeNew.toLocaleDateString()//与本地时间的年月日直接返回的字符串是相同的
+// console.log(toString1, toString2, toString3, toString4,toString5)
+// let toTimeString1 = timeNew.toTimeString()//分时秒部分转化成字符串
+// console.log(toTimeString1)
+// let toDateString1 = timeNew.toDateString()//年月日部分转化成字符串
+// console.log(toDateString1)
 
 
            </script>
