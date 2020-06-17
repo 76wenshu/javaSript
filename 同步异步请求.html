@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// 使用定时函数模拟异步请求：
+// 方法一：使用回调函数
+// function doSomething(callback){
+//   setTimeout(function(){
+//     console.log('执行结束');
+//     let result = 4;
+//     callback(result);
+//   },100);
+// }
+ 
+// function callback(result){
+//   console.log('接收到结果为：'+result);
+// }
+ 
+// doSomething(callback);
+// doSomething((result)=>{console.log('接收到结果为：'+result)});
+
+
+// 方法二：promise对象
+function doSomething(){
+  return new Promise(function(resolve){
+    setTimeout(function(){
+      console.log('执行结束');
+      let result = 6;
+      resolve(result);
+    },100);
+  });
+ 
+}
+ 
+doSomething().then(result=>{
+  console.log('接收到结果为：'+result);
+
+})
+
+    </script>
+</body>
+</html>
