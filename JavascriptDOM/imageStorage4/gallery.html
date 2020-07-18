@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/imageFcunction.js"></script>
+    <link rel="stylesheet" href="./css/image.css">
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <!-- 在使用外部引进的函数的时候注意函数名的变化 -->
+    <!--点击事件中的return false 是阻止默认事件的转化连接  -->
+    <ul>
+        <li><a href="./images/QQ截图20200718091619.png" title = 'oneimage' onclick="imageFunction(this); return false;">one</a></li>
+        <li><a href="./images/QQ截图20200718091631.png" title = 'twoimage' onclick="imageFunction(this); return false;">two</a></li>
+        <li><a href="./images/QQ截图20200718091639.png" title = 'threeimage' onclick="imageFunction(this); return false;">three</a></li>
+        <li><a href="./images/QQ截图20200718091645.png" title = 'fourimage' onclick="imageFunction(this); return false;">four</a></li>
+        <img id ='imageId' src="./images/QQ截图20200718091839.png" alt="moreImage">
+        <P id="description">这就是Test图片</P>
+    </ul>
+</body>
+</html>
