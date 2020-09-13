@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //闭包的含义就是外函数里边有一个内函数，内函数引用外函数的内部变量，之后 内部函数作为返回值进行使用，外部函数的外部可以使用外部函数的内部变量
+        function add(){
+            var a = 3;
+            function acc(){
+                console.log(a)
+            }
+            return acc
+        }
+        var ass = add()
+        ass();
+    </script>
+</body>
+</html>
