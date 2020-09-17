@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let p = new Promise((resolve,rejesct)=>{
+            setTimeout(()=>{
+                let boll = true;
+                if(boll){
+                    resolve(boll)
+                }else{
+                    rejesct(boll)
+                }
+            },1000)
+
+        })
+        p.then((value)=>{
+            console.log(value);
+        },(error)=>{
+            console.log(error);
+        })
+    </script>
+</body>
+</html>
