@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* helloWorldGenerator(){
+            yield "hello";
+            yield "world";
+            return "ending";
+        }
+        var hw = helloWorldGenerator();
+        for(let i=0;i<4;i++){
+            console.log(hw.next())
+        }
+        // console.log(hw)
+    </script>
+</body>
+</html>

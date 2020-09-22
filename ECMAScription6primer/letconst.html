@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 基本用法 */
+
+
+      //let const 
+    //     {
+    //         var i = 6;
+    //        let a = 1;
+    //        const b = 2;
+    //     }
+    //    //6
+    //    console.log(i)
+    //    //a is not defined
+    //    console.log(a)
+    //    //b is not defined
+    //    console.log(b)
+    
+    
+    //声明变量i通过let是在作用域的里边所以外边的获取不到i的情况
+        // for(let i=0; i< 10; i++){
+        // }
+        // console.log(i) //i is not defined
+    //通过全局变量的var的情况全局声明变量在作用域的外边能过获得变量
+        // for(var j=0; j< 10; j++){
+        // }
+        // console.log(j) //j is not defined
+
+        //
+        // var a = ['wzs','dq']
+        // for(let i=0;i<3;i++){
+           
+        //     //变量提升
+        //     // console.log(i,123456)
+        //     let i = 'abs';
+        //     console.log(i);
+        //     console.log(a[i])
+        //     // a[i] = function(){
+        //     //     console.log(i)
+        //     // }
+        // }
+        // // a[1]()
+
+        /* 不存在变量提升 */
+        //变量提升虽然咋console的时候还没有声明ass但是通过变量提升变成undefind了
+        // console.log(ass)
+        // var ass = "adf"
+
+//因为在let中不存在变量提升所以就会报错
+        // console.log(abbb)
+        // let abbb = "abbs"
+
+        //解决暂时性死区的方法就是在未声明变量的前提下不能使用此变量
+
+        /* 不允许重复声明变量 */
+
+        //在let 和 const 中不能重复的声明变量，因为使用let和const不允许重复声明一个变量
+
+
+        // 块级作用域
+        /* 为什么需要块级作用域 */
+
+
+
+    </script>
+</body>
+</html>
