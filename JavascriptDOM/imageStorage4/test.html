@@ -8,9 +8,9 @@
 </head>
 <body>
     <!-- 读取元素 -->
-    <!-- <div id="testDiv"><p>this is <em> my </em> contemt.</p></div> -->
+    <div id="testDiv"><p>this is <em> my </em> contemt.</p></div>
     <!-- 写入元素 -->
-    <div id="testDiv"></div>
+    <!-- <div id="testDiv"></div> -->
     <script>
         //用来获取div元素节点下获得元素节点和文本节点
         //innerHTML既支持写入元素，也支持读取元素
@@ -58,6 +58,20 @@
             //     let testDiv = document.getElementById('testDiv')
             //     testDiv.appendChild(pNode)
             // }
+//现有元素节点之前插入心得元素
+window.onload = function(){
+    
+    let textNode = document.createTextNode("这是li标签")
+    let liNode  = document.createElement("li")
+    let ulNode = document.createElement("ul");
+    liNode.appendChild(textNode)
+    ulNode.appendChild(liNode);
+    let emNode = document.getElementsByTagName("em")[0];
+    console.log(emNode)
+    let divNode = document.getElementsByTagName("p")[0]
+    //只能在父元素上使用insetBefore（）方法进行元素的插入
+    divNode.insertBefore(ulNode,emNode)
+}
     </script>
 </body>
 </html>
