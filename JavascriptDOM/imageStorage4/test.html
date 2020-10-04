@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./write.js"></script> -->
+</head>
+<body>
+    <!-- 读取元素 -->
+    <!-- <div id="testDiv"><p>this is <em> my </em> contemt.</p></div> -->
+    <!-- 写入元素 -->
+    <div id="testDiv"></div>
+    <script>
+        //用来获取div元素节点下获得元素节点和文本节点
+        //innerHTML既支持写入元素，也支持读取元素
+
+        //读取元素（就是在DOM元素的节点中通过查找属性节点testDiv来进行，获取div元素节点下的元素节点和文本节点）
+
+        //普通文本读取
+        // window.onload  = function(){
+        //     let testDiv = document.getElementById("testDiv").innerHTML
+        //     console.log(testDiv)
+        // }
+
+
+        //函数文本读取
+        // writeInsert("就是这么插入的1239 ")
+        //写入元素（）
+            // window.onload  = function(){
+            //     let testDiv = document.getElementById("testDiv")
+            //     testDiv.innerHTML = "<p>I instace <em> my </em> contemt.</p>"
+            //     console.log(testDiv)
+            // }
+//简单的例子（只创造了一个P元素节点，和一个文本节点）
+//在原来没有元素的情况下使用原生的DOM就可以进行元素的插入
+            //新建元素节点
+            // window.onload = function(){
+            //     let para = document.createElement("p")
+            //     //新建文本节点进行插入
+            //     let text  = document.createTextNode('hello world')
+            //     para.appendChild(text)
+            //     let testDiv = document.getElementById("testDiv")
+            //     //找到已有的元素节点位置插入元素
+            //     testDiv.appendChild(para)
+            // }
+//复杂点的例子（就是在使用的时候再同一个元素中插入的元素节点，先进行appedchild的就在前面）
+            // window.onload = function(){
+            //     let pNode = document.createElement("p");
+            //     let pText = document.createTextNode("This is")
+            //     pNode.appendChild(pText)
+            //     let emNode = document.createElement('em');
+            //     let emText = document.createTextNode('my');
+            //     emNode.appendChild(emText);
+            //     pNode.appendChild(emNode);
+            //     let text = document.createTextNode('contend');
+            //     pNode.appendChild(text);
+            //     let testDiv = document.getElementById('testDiv')
+            //     testDiv.appendChild(pNode)
+            // }
+    </script>
+</body>
+</html>
