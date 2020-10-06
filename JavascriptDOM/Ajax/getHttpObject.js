@@ -8,12 +8,21 @@
 //    　　}
 //  }
 
-let ajax = new XMLHttpRequest();
-ajax.open('请求方式',"请求的URl", true)//true是异步请求， false是同步请求
-if(ajax){
-    ajax.onreadystatechange = function(){
-        if(ajax.readyState ===4 || ajax.status ===200 ){
-            console.log(ajax.responseText)
-        }
+// let ajax = new XMLHttpRequest();
+// ajax.open('请求方式',"请求的URl", true)//true是异步请求， false是同步请求
+// if(ajax){
+//     ajax.onreadystatechange = function(){
+//         if(ajax.readyState ===4 || ajax.status ===200 ){
+//             console.log(ajax.responseText)
+//         }
+//     }
+// }
+
+let req = new XMLHttpRequest()
+req.open('get',"url",true)
+req.send();
+req.onreadystatechange  = function(){
+    if(req.readyState===4 || req.status === 200){
+        console.log(req.responseText)
     }
 }
