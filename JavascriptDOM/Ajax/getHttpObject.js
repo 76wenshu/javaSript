@@ -18,11 +18,20 @@
 //     }
 // }
 
-let req = new XMLHttpRequest()
-req.open('get',"url",true)
-req.send();
-req.onreadystatechange  = function(){
-    if(req.readyState===4 || req.status === 200){
-        console.log(req.responseText)
-    }
-}
+// let req = new XMLHttpRequest()
+// req.open('get',"url",true)
+// req.send();
+// req.onreadystatechange  = function(){
+//     if(req.readyState===4 || req.status === 200){
+//         console.log(req.responseText)
+//     }
+// }
+
+// let rea = new XMLHttpRequest();
+// rea.open('post','url',true);
+// rea.send(param);
+// rea.onreadystatechange = function(){
+//     if(rea.status===200 || rea.readyState===4){
+// console.log(rea.responseText)
+//     }
+// }
