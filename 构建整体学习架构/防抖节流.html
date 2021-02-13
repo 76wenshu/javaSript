@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //防抖
+        function gangfou(fn, time){
+            //用来监听用于改变的变量
+            let timeOut = null;
+            return function(){
+                //若果setTimeout还没有进行完毕就将这个定时器去掉，重新开始
+                clearTimeout(timeOut)
+               timeOut =  setTimeout(function(){
+                    fn.applay(this, arguments)
+                }, time)
+            }
+        }
+        //节流
+        function jieliu(fu, time){
+            let timeBol = true;
+            if(!timeBol) return
+            return function(){
+                timeBol = false
+                setTimeout(()=>{
+                    fn.applay(this, arguments)
+                    timeBol = true
+                }, time)
+            }
+
+        }
+    </script>
+</body>
+</html>
